@@ -12,6 +12,11 @@ import java.util.List;
 public class EmployeeController {
  @Autowired
     EmployeeService employeeServiceImpl;
+
+ @GetMapping("/welcome")
+ public  String sayHello(){
+     return "welcome to pune";
+ }
     @PostMapping("/savedata")
     public  String saveData(@RequestBody Employee employee){
         employeeServiceImpl.saveData(employee);
